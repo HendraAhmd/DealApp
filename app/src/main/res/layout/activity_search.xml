@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center"
+    tools:context=".SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/r20"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/home_btn"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:src="@drawable/ic_home"
+            android:padding="8dp"
+            android:layout_centerInParent="true"
+            android:background="#fff"/>
+
+        <ImageView
+            android:id="@+id/cari_btn"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:src="@drawable/ic_search_white"
+            android:layout_centerInParent="true"
+            android:background="@drawable/orange_buttons"/>
+
+        <ImageView
+            android:id="@+id/post_btn"
+            android:layout_width="115dp"
+            android:layout_height="50dp"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:src="@drawable/ic_add_circle"
+            android:layout_centerInParent="true"
+            android:background="#fff"/>
+
+    </LinearLayout>
+    
+    <RelativeLayout
+        android:id="@+id/r5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/r20"
+        android:gravity="center"
+        android:layout_centerHorizontal="true">
+        
+        <EditText
+            android:id="@+id/search_product_name"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mlight"
+            android:hint="nama produk (gunakan huruf kecil)"
+            android:background="@drawable/bg_input_edit"
+            android:padding="8dp"
+            android:textSize="15sp"
+            android:layout_marginStart="5dp"
+            android:layout_centerVertical="true"
+            android:textColorHint="@color/blackPrimary"/>
+        
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="cari"
+            android:padding="8dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/orange_buttons"
+            android:layout_toRightOf="@+id/search_product_name"/>
+        
+    </RelativeLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/search_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/r5"/>
+
+</RelativeLayout>
